@@ -1,0 +1,76 @@
+/* AgregarPago.css */
+.pago-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3f9fb; /* Fondo blanco claro */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+}
+
+.pago-form h2 {
+  color: #001240; /* Azul oscuro */
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pago-form input {
+  width: 100%; /* Abarca todo el ancho del formulario */
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #001240; /* Azul oscuro */
+}
+
+.pago-form input:focus {
+  outline: none;
+  border-color: #cba54c; /* Dorado al enfocar */
+}
+
+.pago-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: #f3f9fb; /* Blanco */
+  background-color: #001240; /* Azul oscuro */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.pago-form button:hover {
+  background-color: #cba54c; /* Dorado al pasar el mouse */
+}
+
+.pago-form button:active {
+  background-color: #5c3410; /* Tono marrón al hacer clic */
+}
+
+/* Estilo específico para el botón "Imprimir Resumen" */
+.imprimir-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: #f3f9fb; /* Blanco */
+  background-color: #001240; /* Azul oscuro */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.imprimir-btn:hover {
+  background-color: #cba54c; /* Dorado al pasar el mouse */
+}
+
+.imprimir-btn:active {
+  background-color: #5c3410; /* Tono marrón al hacer clic */
+}

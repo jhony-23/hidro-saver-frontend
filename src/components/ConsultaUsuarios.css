@@ -1,0 +1,90 @@
+/* ConsultaUsuarios.css */
+.consulta-usuarios-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3f9fb;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .consulta-usuarios-form h2 {
+    color: #001240;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .consulta-usuarios-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #001240;
+  }
+  
+  .consulta-usuarios-form input:focus {
+    outline: none;
+    border-color: #cba54c;
+  }
+  
+  .consulta-usuarios-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    color: #f3f9fb;
+    background-color: #001240;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .consulta-usuarios-form button:hover {
+    background-color: #cba54c;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .usuario-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  .usuario-info h3 {
+    font-size: 1.5rem;
+    color: #001240;
+  }
+  
+  .usuario-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .acciones-usuario button,
+  .form-editar button {
+    width: 48%;
+    margin: 5px 1%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .acciones-usuario button:hover,
+  .form-editar button:hover {
+    background-color: #cba54c;
+  }
+  

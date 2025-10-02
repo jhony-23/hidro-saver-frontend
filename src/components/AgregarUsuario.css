@@ -1,0 +1,88 @@
+/* Estilos del formulario */
+.agregar-usuario-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f9fb; /* Fondo claro */
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  color: #001240; /* Azul oscuro */
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 1em;
+  color: #001240; /* Azul oscuro */
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cba54c; /* Dorado */
+  border-radius: 4px;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #001240; /* Azul oscuro */
+}
+
+.form-button {
+  background-color: #001240; /* Azul oscuro */
+  color: #fff; /* Blanco */
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-button:hover {
+  background-color: #cba54c; /* Dorado */
+  transform: scale(1.05);
+}
+
+/* Estilos para el resumen del usuario */
+.usuario-resumen {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.usuario-resumen h3 {
+  color: #001240;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.usuario-resumen p {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.usuario-resumen button {
+  margin-top: 10px;
+  margin-right: 10px;
+}

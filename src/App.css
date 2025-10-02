@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilos para la barra de navegación */
+.nav-bar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 15px;
+  background-color: #001240;
+  border-bottom: 2px solid #cba54c;
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilos para los enlaces de la barra de navegación */
+.nav-bar a {
+  text-decoration: none;
+  color: #f3f9fb; /* Blanco claro */
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 15px;
+  transition: color 0.3s ease; /* Efecto suave al pasar el ratón */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-bar a:hover {
+  color: #cba54c; /* Dorado al pasar el ratón */
+}
+
+/* Estilos para el botón de "Cerrar sesión" */
+.nav-bar button {
+  background: none;
+  border: none;
+  color: #f3f9fb; /* Blanco claro, igual que los enlaces */
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0 15px;
+  transition: color 0.3s ease; /* Efecto suave al pasar el ratón */
+}
+
+.nav-bar button:hover {
+  color: #cba54c; /* Dorado al pasar el ratón */
 }

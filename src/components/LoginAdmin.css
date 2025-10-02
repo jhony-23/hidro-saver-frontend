@@ -1,0 +1,43 @@
+.login-admin {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #5c3410; /* Bordes con color oscuro */
+  border-radius: 8px;
+  background-color: #fbfffd; /* Fondo blanco suave */
+  text-align: center;
+}
+
+.login-admin h2 {
+  margin-bottom: 20px;
+  color: #001240; /* Título con color azul oscuro */
+}
+
+.login-admin input {
+  width: calc(100% - 20px);
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #5c3410; /* Borde con color oscuro */
+  border-radius: 4px;
+  background-color: #f9f9f9; /* Fondo claro en los campos de entrada */
+  color: #001240; /* Texto en azul oscuro */
+}
+
+.login-admin button {
+  width: 100%;
+  padding: 10px;
+  background-color: #caac4c; /* Botón de color dorado */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-admin button:hover {
+  background-color: #5c3410; /* Color oscuro al hacer hover */
+}
+
+.login-admin .error {
+  color: red;
+  margin-top: 10px;
+}

@@ -1,0 +1,178 @@
+.gestion-sectores {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.gestion-sectores h2 {
+  color: #2c5282;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.crear-sector {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.crear-sector h3 {
+  color: #2d3748;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4299e1;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #4a5568;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.btn-crear {
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-crear:hover {
+  background: linear-gradient(135deg, #3182ce, #2c5282);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
+}
+
+.lista-sectores {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lista-sectores h3 {
+  color: #2d3748;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #48bb78;
+  padding-bottom: 10px;
+}
+
+.sectores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.sector-card {
+  background: #f7fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.sector-card:hover {
+  border-color: #4299e1;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(66, 153, 225, 0.15);
+}
+
+.sector-info h4 {
+  color: #2d3748;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.sector-info p {
+  color: #718096;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.sector-info small {
+  color: #a0aec0;
+  font-weight: bold;
+}
+
+.sector-actions {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.btn-eliminar {
+  background: linear-gradient(135deg, #e53e3e, #c53030);
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background: linear-gradient(135deg, #c53030, #9c2a2a);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(229, 62, 62, 0.4);
+}
+
+.error-message {
+  background: #fed7d7;
+  color: #c53030;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border-left: 4px solid #e53e3e;
+  font-weight: bold;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #4a5568;
+}
+
+@media (max-width: 768px) {
+  .gestion-sectores {
+    padding: 15px;
+  }
+  
+  .sectores-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .crear-sector {
+    padding: 20px;
+  }
+}

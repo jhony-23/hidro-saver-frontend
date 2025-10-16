@@ -1,43 +1,182 @@
 .login-admin {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #5c3410; /* Bordes con color oscuro */
-  border-radius: 8px;
-  background-color: #fbfffd; /* Fondo blanco suave */
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 18, 64, 0.15);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  backdrop-filter: blur(10px);
   text-align: center;
 }
 
+.login-admin::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(135deg, #001240, #cba54c);
+  border-radius: 20px 20px 0 0;
+}
+
 .login-admin h2 {
-  margin-bottom: 20px;
-  color: #001240; /* Título con color azul oscuro */
+  color: #001240;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #001240, #4299e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-admin form {
+  display: flex;
+  flex-direction: column;
 }
 
 .login-admin input {
-  width: calc(100% - 20px);
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #5c3410; /* Borde con color oscuro */
-  border-radius: 4px;
-  background-color: #f9f9f9; /* Fondo claro en los campos de entrada */
-  color: #001240; /* Texto en azul oscuro */
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #2d3748;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-admin input:focus {
+  outline: none;
+  border-color: #4299e1;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+  transform: translateY(-2px);
 }
 
 .login-admin button {
-  width: 100%;
-  padding: 10px;
-  background-color: #caac4c; /* Botón de color dorado */
-  color: #fff;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #001240, #4299e1);
   border: none;
-  border-radius: 4px;
+  border-radius: 12px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 18, 64, 0.3);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.login-admin button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(203, 165, 76, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.login-admin button:hover::before {
+  left: 100%;
 }
 
 .login-admin button:hover {
-  background-color: #5c3410; /* Color oscuro al hacer hover */
+  background: linear-gradient(135deg, #4299e1, #cba54c);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 18, 64, 0.4);
 }
 
-.login-admin .error {
-  color: red;
-  margin-top: 10px;
+.error {
+  background: linear-gradient(135deg, #fed7d7, #feb2b2);
+  color: #c53030;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 600;
+  border-left: 4px solid #e53e3e;
+  box-shadow: 0 4px 10px rgba(229, 62, 62, 0.1);
+}
+
+.info-message {
+  background: linear-gradient(135deg, #bee3f8, #90cdf4);
+  color: #2c5282;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border-left: 4px solid #4299e1;
+  text-align: center;
+}
+
+.info-message p {
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.info-message p:first-child {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.loading {
+  text-align: center;
+  color: #4a5568;
+  font-size: 18px;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-admin {
+    width: 95%;
+    padding: 30px 20px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 20px auto;
+  }
+
+  .login-admin h2 {
+    font-size: 1.7rem;
+  }
+
+  .login-admin input,
+  .login-admin button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* Animation for login form */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.login-admin {
+  animation: fadeInUp 0.6s ease-out;
 }

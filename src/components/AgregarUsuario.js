@@ -1,10 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AgregarUsuario.css';
 
 const AgregarUsuario = () => {
   const [form, setForm] = useState({ nombre: '', apellido: '', dpi: '', sectorId: '' });
-  const [usuarioAgregado, setUsuarioAgregado] = useState(null); // Nuevo estado para almacenar el usuario agregado
+  const [usuarioAgregado, setUsuarioAgregado] = useState(null);
+  const [sectores, setSectores] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    cargarSectores();
+  }, []);
+
+  const cargarSectores = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/sectores');
+      setSectores(response.data);
+    } catch (error) {
+      console.error('Error al cargar sectores:', error);
+      alert('Error al cargar los sectores disponibles');
+    }
+  };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -12,13 +28,23 @@ const AgregarUsuario = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    
     try {
-      const response = await axios.post('http://localhost:3000/usuarios/agregar', form);
-      setUsuarioAgregado(response.data.usuario); // Guardar el usuario agregado en el estado
-      setForm({ nombre: '', apellido: '', dpi: '', sectorId: '' }); // Resetear el formulario
+      const token = localStorage.getItem('adminToken');
+      const response = await axios.post('http://localhost:3000/usuarios', form, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      
+      setUsuarioAgregado(response.data.usuario);
+      setForm({ nombre: '', apellido: '', dpi: '', sectorId: '' });
+      alert('Usuario agregado exitosamente');
     } catch (error) {
       console.error('Error al agregar usuario:', error);
-      alert('Hubo un error al agregar el usuario.');
+      const mensaje = error.response?.data?.message || 'Hubo un error al agregar el usuario.';
+      alert(mensaje);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -81,19 +107,25 @@ const AgregarUsuario = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="sectorId">ID del Sector:</label>
-          <input
+          <label htmlFor="sectorId">Sector:</label>
+          <select
             id="sectorId"
             className="form-input"
             name="sectorId"
             value={form.sectorId}
             onChange={handleChange}
-            placeholder="ID del Sector"
             required
-          />
+          >
+            <option value="">Seleccione un sector</option>
+            {sectores.map(sector => (
+              <option key={sector.id} value={sector.id}>
+                {sector.nombre} - {sector.descripcion}
+              </option>
+            ))}
+          </select>
         </div>
-        <button type="submit" className="form-button">
-          Agregar Usuario
+        <button type="submit" className="form-button" disabled={loading}>
+          {loading ? 'Agregando...' : 'Agregar Usuario'}
         </button>
       </form>
 

@@ -41,3 +41,66 @@
   color: red;
   margin-top: 10px;
 }
+
+/* Enlace a recuperar */
+.login-admin .link-recuperar {
+  display: inline-block;
+  margin-top: 12px;
+  color: #001240;
+  text-decoration: none;
+}
+.login-admin .link-recuperar:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor de recuperación (reutiliza paleta) */
+.recuperar-wrapper {
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #5c3410;
+  border-radius: 8px;
+  background-color: #fbfffd;
+}
+.recuperar-wrapper h2 {
+  color: #001240;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.recuperar-wrapper form input {
+  width: calc(100% - 20px);
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #5c3410;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #001240;
+}
+.recuperar-wrapper form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #caac4c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.recuperar-wrapper form button:hover {
+  background-color: #5c3410;
+}
+.recuperar-wrapper .actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Hints/validaciones */
+.hint {
+  font-size: 0.9rem;
+  margin: 4px 0 0 2px;
+}
+.hint.error {
+  color: #c0392b; /* rojo suave */
+}
+.hint.success {
+  color: #1b7e35; /* verde */
+}

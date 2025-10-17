@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './LoginAdmin.css';
 
 const LoginAdmin = ({ onLogin }) => {
@@ -40,6 +41,9 @@ const LoginAdmin = ({ onLogin }) => {
         <button type="submit">Iniciar Sesión</button>
       </form>
       {error && <p className="error">{error}</p>}
+      <div style={{ marginTop: 12 }}>
+        <Link className="link-recuperar" to="/recuperar">Olvidé mi contraseña</Link>
+      </div>
     </div>
   );
 };
